@@ -9,7 +9,8 @@
     "comparePrice": null,
     "inStock": true,
     "options": {},
-    "variants": []
+    "variants": [],
+	"descriptions": "Ini adalah deskripsi produk cuy"
 }
 
 Rustic look comes with industrial chic and luxe finish.This steampunk pendant system

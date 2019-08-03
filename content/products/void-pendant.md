@@ -9,7 +9,8 @@
     "actualPrice": "₹ 18,500.00",
     "inStock": true,
     "options": {},
-    "variants": []
+    "variants": [],
+	"descriptions": "Ini adalah deskripsi produk cuy"
 }
 
 Inspired by vacuum flasks, Void is made from glass which is formed into a complex

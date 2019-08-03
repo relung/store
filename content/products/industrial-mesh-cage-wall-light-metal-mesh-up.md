@@ -9,7 +9,8 @@
     "comparePrice": "₹ 5000.00",
     "inStock": false,
     "options": {},
-    "variants": []
+    "variants": [],
+	"descriptions": "Ini adalah deskripsi produk cuy"
 }
 
 This classic cage light is perfect to add class and character to your home decor. The cult Edison Bulbs will definitely set a welcoming mood to your home interiors.

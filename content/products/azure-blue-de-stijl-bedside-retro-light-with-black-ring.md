@@ -24,7 +24,8 @@
             "actualPrice": "₹ 2000.00",
             "inStock": false
         }
-    ]
+    ],
+	"descriptions": "Ini adalah deskripsi produk cuy"
 
 }
 

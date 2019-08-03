@@ -9,7 +9,8 @@
     "comparePrice": "₹ 25,920.00",
     "inStock": false,
     "options": {},
-    "variants": []
+    "variants": [],
+	"descriptions": "Ini adalah deskripsi produk cuy"
 }
 
 Oda is a floor lamp made from a handblown tinted glass barrel balancing on a simple and elegant metal structure.

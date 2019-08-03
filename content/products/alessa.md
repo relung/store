@@ -31,7 +31,8 @@
             "actualPrice": "₹ 1,032.00",
             "inStock": true
         }
-    ]
+    ],
+	"descriptions": "Ini adalah deskripsi produk cuy"
 }
 
 The Alessa collection features a metal shade that when illuminated provides a beautiful two toned look. Perfect for mounting along your house, on your deck or patio, or as entryway lights. Available in black, green, white and clear glass.

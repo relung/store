@@ -9,7 +9,8 @@
     "comparePrice": null,
     "inStock": true,
     "options": {},
-    "variants": []
+    "variants": [],
+	"descriptions": "Ini adalah deskripsi produk cuy"
 }
 
 Total Fixture Dimensions (in inches): 51x51x63
