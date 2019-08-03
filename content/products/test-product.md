@@ -4,7 +4,6 @@ categories = ["Sepatu"]
 comparePrice = ""
 date = "2019-08-02T17:00:00+00:00"
 descriptions = "Halo ini adalah deskripsi produk"
-draft = true
 images = ["/uploads/Capture.PNG", "/uploads/3982650.png"]
 inStock = "true"
 tags = ["Sepatu"]
