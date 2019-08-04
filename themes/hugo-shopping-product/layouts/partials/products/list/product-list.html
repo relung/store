@@ -1,19 +1,141 @@
-<header>
-    <h1 class="text-center">{{ .Site.Title }}</h1>
-    {{ with .Site.Params.description }}<h4 class="text-center">{{ . }}</h4>{{ end }}
-</header>
-<article class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            {{ partial "products/common/site-main-nav.html" . }} 
+<div class="animsition">
+
+    {{ partial "products/common/site-header.html" . }}
+
+    <!-- Product -->
+    <div class="bg0 m-t-23 p-b-140">
+        <div class="container">
+            {{ partial "products/common/site-main-nav.html" . }}
+            <div class="row isotope-grid">
+
+                {{ range $index, $element := .Data.Pages }}
+                {{ partial "products/list/product-list-item.html" (dict "context" . "index" $index) }}
+                {{ end }}
+            </div>
+
         </div>
     </div>
-    <div class="row">
-        {{ range .Data.Pages }} 
-            {{ partial "products/list/product-list-item.html" . }} 
-        {{ end }}
+
+
+    {{ partial "products/common/site-footer.html" . }}
+
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <i class="zmdi zmdi-chevron-up"></i>
+        </span>
     </div>
-    <script>
-    var productVariants = null;
-    </script>
-</article>
+
+    <!-- Modal1 -->
+    {{ range $index, $element := .Data.Pages }}
+   <!-- <div class="wrap-modal-{{ $index }} js-modal-{{ $index }} p-t-60 p-b-20">
+        <div class="overlay-modal-{{ $index }} js-hide-modal-{{ $index }}"></div>
+
+        <div class="container">
+            <div class="bg0 p-t-60 p-b-30 p-lr-15-lg how-pos3-parent">
+                <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                    <img src="/images/icons/icon-close.png" alt="CLOSE">
+                </button>
+
+                <div class="row">
+
+
+                    <div class="col-md-6 col-lg-7 p-b-30">
+                        <div class="p-l-25 p-r-30 p-lr-0-lg">
+                            <div class="wrap-slick3 flex-sb flex-w">
+                                <div class="wrap-slick3-dots"></div>
+                                <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+                                <div class="slick3 gallery-lb">
+
+                                    {{ range $index := .Params.images }}
+                                    <div class="item-slick3" data-thumb="{{ . | absURL }}">
+                                        <div class="wrap-pic-w pos-relative">
+                                            <img src="{{ . | absURL }}" alt="IMG-PRODUCT">
+
+                                            <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
+                                                href="{{ . | absURL }}">
+                                                <i class="fa fa-expand"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 p-b-30">
+                        <div class="p-r-50 p-t-5 p-lr-0-lg">
+                            <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                                {{ .Title }}
+                            </h4>
+
+                            <span class="mtext-106 cl2">
+                                {{ if .Params.isDiscount }} <span class="product-compare-price"
+                                    style="text-decoration: line-through">{{ .Params.priceBefore }}</span>{{end}}
+                                <span class="product-actual-price">{{ .Params.actualPrice }}</span>
+                            </span>
+
+                            <p class="stext-102 cl3 p-t-23">
+                                <b>Metode Pembayaran: </b><span class="product-compare-price">Bayar di Tempat
+                                    (COD)</span>
+                            </p>
+
+                          
+                            <div class="p-t-33">
+
+                                {{ range $index, $element := .Params.options }}
+                                <div class="flex-w flex-r-m p-b-10">
+                                    <div class="size-203 flex-c-m respon6">{{ $index | humanize }}</div>
+                                    <div class="size-204 respon6-next">
+                                        <div class="rs1-select2 bor8 bg0">
+
+                                            <select class="js-select2" name="time">
+                                                {{ range $element  }}
+                                                <option>{{ . }}</option>
+                                                {{ end }}
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ end }}
+
+
+                                <div class="flex-w flex-r-m p-b-10">
+                                    <div class="size-204 flex-w flex-m respon6-next">
+                                        <div class="wrap-num-product flex-w m-r-20 m-tb-10">
+                                            <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                                                <i class="fs-16 zmdi zmdi-minus"></i>
+                                            </div>
+
+                                            <input class="mtext-104 cl3 txt-center num-product" type="number"
+                                                name="num-product" value="1">
+
+                                            <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+                                                <i class="fs-16 zmdi zmdi-plus"></i>
+                                            </div>
+                                        </div>
+
+                                        <button
+                                            class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
+                                            Add to cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div> -->
+    {{end}}

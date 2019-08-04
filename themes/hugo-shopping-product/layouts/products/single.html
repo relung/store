@@ -1,39 +1,176 @@
 {{ define "main" }}
-<header>
-    <h2 class="text-center" style="margin-top: 20px">{{ .Site.Title }}</h2>
-    {{ with .Site.Params.description }}<h4 class="text-center">{{ . }}</h4>{{ end }}
-</header>
-<article class="container-fluid" style="padding: 25px">
-    <div class="row">
-        <div class="col-12">
+<div class="animsition">
+
+    <!-- Header -->
+    {{ partial "products/common/site-header.html" . }}
+
+
+
+    <!-- Product Detail -->
+    <section class="sec-product-detail bg0 p-t-65 p-b-60">
+        <div class="container">
             {{ partial "products/common/site-main-nav.html" . }}
-        </div>
-    </div>
-    <div class="row align-items-start">
-        <div class="col-12 col-md-6 order-md-2">
-            {{ partial "products/single/product-single-heading.html" . }}
-            <div class="d-none d-md-block">{{ .Content }}</div>
-        </div>
-        <div class="col-12 col-md-6 order-md-1">
-            <center>
             <div class="row">
-                {{ range $index := .Params.images }}
-                <div class='col-lg-6'>
-                    <a href="#{{ $index  }}">
-                        <img style="padding-bottom: 5px" class="b-lazy img-fluid text-center rounded object-fit: cover;"
-                            data-src="{{ . | absURL }}"
-                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-                    </a>
-                    <a href="#_" class="lightbox" id="{{ $index  }}">
-                        <img class="b-lazy img-fluid text-center" src="{{ . | absURL }}" />
-                    </a>
+
+                <div class="col-md-6 col-lg-7 p-b-30">
+                    <div class="p-l-25 p-r-30 p-lr-0-lg">
+                        <div class="wrap-slick3 flex-sb flex-w">
+                            <div class="wrap-slick3-dots"></div>
+                            <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
+
+                            <div class="slick3 gallery-lb">
+
+
+
+                                {{ range $index := .Params.images }}
+                                <div class="item-slick3" data-thumb="{{ . | absURL }}">
+                                    <div class="wrap-pic-w pos-relative">
+                                        <img src="{{ . | absURL }}" alt="IMG-PRODUCT">
+
+                                        <a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04"
+                                            href="{{ . | absURL }}">
+                                            <i class="fa fa-expand"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                {{ end }}
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                {{ end }}
+
+                <div class="col-md-6 col-lg-5 p-b-30">
+                    <div class="p-r-50 p-t-5 p-lr-0-lg">
+                        <h4 class="mtext-105 cl2 js-name-detail p-b-14">
+                            {{ .Title }}
+                        </h4>
+                        {{ if .Params.isDiscount }}
+                        <div class="font-weight-light text-success border border-success rounded"
+                            style="padding: 5px; margin-bottom: 10px">Produk ini sedang dalam <b>diskon</b>, order
+                            sekarang sebelum promo berakhir!</div>
+                        {{ end }}
+                        <span class="mtext-106 cl2">
+                            {{ if .Params.isDiscount }}
+                            <span class="badge badge-warning">-{{ .Params.discount }}%</span> <span
+                                class="product-compare-price"
+                                style="text-decoration: line-through">{{ .Params.priceBefore }}</span>{{end}}
+                            <span class="product-actual-price">{{ .Params.actualPrice }}</span>
+                        </span>
+
+                        <p class="stext-102 cl3 p-t-23">
+                            <b>Metode Pembayaran: </b><span class="product-compare-price">Bayar di Tempat (COD)</span>
+                        </p>
+
+                        <!--  -->
+                        <div class="p-t-33">
+
+
+
+                            {{ range $index, $element := .Params.options }}
+                            <div class="flex-w flex-r-m p-b-10">
+                                <div class="size-203 flex-c-m respon6">{{ $index | humanize }}</div>
+                                <div class="size-204 respon6-next">
+                                    <div class="rs1-select2 bor8 bg0">
+
+                                        <select class="js-select2" name="time">
+                                            {{ range $element  }}
+                                            <option>{{ . }}</option>
+                                            {{ end }}
+                                        </select>
+                                        <div class="dropDownSelect2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+
+
+                            <div class="flex-w flex-r-m p-b-10">
+                                <div class="size-204 flex-w flex-m respon6-next">
+                                        <span class="size-203 flex-c-m respon6">Jumlah: </span>
+                                    <div class="wrap-num-product flex-w m-r-20 m-tb-10">
+                                        <div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+                                            <i class="fs-16 zmdi zmdi-minus"></i>
+                                        </div>
+
+                                        <input class="mtext-104 cl3 txt-center num-product" type="number"
+                                            name="num-product" value="1">
+
+                                        <div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+                                            <i class="fs-16 zmdi zmdi-plus"></i>
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                                
+            
+                            </div>
+                            <button style="margin-top: 10px; align-content: center" type="button" class="btn btn-primary btn-lg js-addcart-detail btn-block">
+                                        Order sekarang
+                                </button>
+                        </div>
+
+
+                    </div>
+                </div>
             </div>
-            </center>
+
+            <div class="bor10 m-t-50 p-t-43 p-b-40">
+                <!-- Tab01 -->
+                <div class="tab01">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item p-b-10">
+                            <a class="nav-link active" data-toggle="tab" href="#description" role="tab">Detail</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content p-t-43">
+                        <!-- - -->
+                        <div class="tab-pane fade show active" id="description" role="tabpanel">
+                            <div class="how-pos2 p-lr-15-md">
+                                <p class="stext-102 cl6">
+                                    {{ .Content }}
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-12 col-md-6 order-md-2 d-block d-md-none">
-            <p>{{ .Content }}</p>
+
+        <div class="bg6 flex-c-m flex-w size-302 m-t-73 p-tb-15">
+            <span class="stext-107 cl6 p-lr-25">
+                SKU: {{ .Params.sku }}
+            </span>
+
+            <span class="stext-107 cl6 p-lr-25">
+                Tags:
+                {{ range $index := .Params.tags }}
+                #{{ . }}
+                {{ end }}
+            </span>
+
+
         </div>
-</article>
+    </section>
+
+
+
+
+    {{ partial "products/common/site-footer.html" . }}
+
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <i class="zmdi zmdi-chevron-up"></i>
+        </span>
+    </div>
+</div>
 {{ end }}

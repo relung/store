@@ -1,14 +1,15 @@
 +++
+sku = "SPT-HP-002"
 isDiscount = true
 discount = "20"
 priceBefore = "Rp 370.000"
 actualPrice = "Rp 250.000"
 categories = ["Sepatu"]
 date = "2019-08-02T17:00:00+00:00"
-images = ["/uploads/Capture.jpg", "/uploads/925.jpg"]
+images = ["/uploads/Capture.jpg", "/uploads/3982650.jpg"]
 inStock = true
 tags = ["Sepatu"]
-thumbnailImage = "/uploads/925.jpg"
+thumbnailImage = "/uploads/Capture.jpg"
 title = "Test Product"
 
 [options]

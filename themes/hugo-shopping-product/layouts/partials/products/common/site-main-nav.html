@@ -1,12 +1,28 @@
-<nav class="navbar navbar-expand navbar-light justify-content-center">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="{{ "products/" | absURL }}">All</a>
-        </li>
+<div class="flex-w flex-sb-m p-b-52">
+    <div class="flex-w flex-l-m filter-tope-group m-tb-10">
+
+        <a class="nav-link" href="{{ "products/" | absURL }}">
+            <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1">
+                All Products
+            </button>
+        </a>
+
         {{ range ($.Site.GetPage "taxonomyTerm" "categories").Pages }}
-        <li class="nav-item">
-            <a class="nav-link" href="{{ .Permalink }}">{{ .Title | title }}</a>
-        </li>
+        <a class="nav-link" href="{{ .Permalink }}">
+            {{ if eq .Title "Diskon" }}
+            <div class="label1" data-label1="hot">
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" class="label1" data-label1="hot">
+                    {{ .Title | title }}
+                </button>
+            </div>
+            {{ else }}    
+            <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5">
+                {{ .Title }}
+            </button>
+            {{ end }}
+        </a>
         {{ end }}
-    </ul>
-</nav>
+
+    </div>
+
+</div>

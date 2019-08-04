@@ -1,33 +1,34 @@
-<a class="col-6 col-lg-3" href="{{ .RelPermalink }}" style="color: inherit;">
-    <img class="b-lazy img-fluid text-center" data-src="{{ .Params.thumbnailImage | absURL }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-    <p class="text-left">
-        <span style="font-size: 13px">{{ .Params.title }}</span>
-        <br/>
-        <span style="font-size: 16px">
-            {{ if .Params.actualPrice }}
-                {{ $.Scratch.Set "minimumPrice" (.Params.actualPrice | string) }}
-            {{ else }}
-                {{ $.Scratch.Set "minimumPrice" "999999999999999"}}                 
-            {{ end }}
-            {{ if .Params.inStock }}
-                {{ $.Scratch.Set "inStock" (.Params.inStock | string) }}
-            {{ else }}
-                {{ $.Scratch.Set "inStock" "false" }}
-            {{ end }}
-            {{ range .Params.variants }}
-                {{ $variantActualPrice := (.actualPrice | replaceRE "[^0-9.]+" "" | float )  }}
-                {{ $actualPrice := ($.Scratch.Get "minimumPrice" | replaceRE "[^0-9.]+" "" | float) }}
-                {{ if lt $variantActualPrice $actualPrice }}
-                    {{ $.Scratch.Set "minimumPrice" (.actualPrice | string)}} 
-                    {{ $.Scratch.Set "isMinimumVariantPrice" "true"}}
-                {{ end }}
-                {{ if .inStock }}
-                    {{ $.Scratch.Set "inStock" "true" }}
-                {{ end }}
-            {{ end }}
-            {{ if eq ($.Scratch.Get "isMinimumVariantPrice") "true" }} From {{ end }}
-            {{ $.Scratch.Get "minimumPrice" }} 
-            {{ if not (eq ($.Scratch.Get "inStock") "true")}} <span class="font-weight-bold">— Sold Out</span> {{ end }}
-        </span>
-    </p>
-</a>
+<div class="col-sm-6 col-md-4 col-lg-3 p-b-35 isotope-item men">
+    <!-- Block2 -->
+    <div class="block2">
+        <div class="block2-pic hov-img0">
+            <img src="{{ .context.Params.thumbnailImage | absURL }}" alt="IMG-PRODUCT">
+
+            <a href="{{ .context.RelPermalink }}"
+                class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn-{{ .index }} p-lr-15 trans-04">
+                View Product
+            </a>
+        </div>
+
+        <div class="block2-txt flex-w flex-t p-t-14">
+            <div class="block2-txt-child1 flex-col-l ">
+                <a href="{{ .context.RelPermalink }}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                    {{ .context.Params.title }}
+                </a>
+
+                <span class="stext-105 cl3">
+                    {{ if .context.Params.isDiscount }}
+                    <span class="product-compare-price"
+                        style="text-decoration: line-through">{{ .context.Params.priceBefore }}</span>
+                    {{end}} {{ .context.Params.actualPrice }}
+                </span>
+            </div>
+
+            <div class="block2-txt-child2 flex-r p-t-3">
+                {{ if .context.Params.isDiscount }}
+                <span class="badge badge-danger">-{{ .context.Params.discount }}%</span>
+                {{end}}
+            </div>
+        </div>
+    </div>
+</div>
