@@ -1,0 +1,50 @@
+---
+label: Product
+hide_body: false
+fields:
+- type: text
+  name: sku
+  label: sku
+- type: boolean
+  name: isDiscount
+  label: isDiscount
+- type: text
+  name: discount
+  label: discount
+- type: text
+  name: priceBefore
+  label: priceBefore
+- type: text
+  name: actualPrice
+  label: actualPrice
+- type: list
+  name: categories
+  label: categories
+- type: datetime
+  name: date
+  label: date
+- type: image_gallery
+  name: images
+  label: images
+- type: boolean
+  name: inStock
+  label: inStock
+- type: list
+  name: tags
+  label: tags
+- type: file
+  name: thumbnailImage
+  label: thumbnailImage
+- type: text
+  name: title
+  label: title
+- type: field_group
+  name: options
+  label: options
+  fields:
+  - type: list
+    name: Warna
+    label: Warna
+  - type: list
+    name: Ukuran
+    label: Ukuran
