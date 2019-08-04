@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sepatu on My New Hugo Site</title>
+    <link>http://example.org/tags/sepatu/</link>
+    <description>Recent content in Sepatu on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 02 Aug 2019 17:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/sepatu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Test Product</title>
+      <link>http://example.org/products/test-product-2/</link>
+      <pubDate>Fri, 02 Aug 2019 17:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/products/test-product-2/</guid>
+      <description>Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu</description>
+    </item>
+    
+    <item>
+      <title>Test Product</title>
+      <link>http://example.org/products/test-product/</link>
+      <pubDate>Fri, 02 Aug 2019 17:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/products/test-product/</guid>
+      <description>Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu</description>
+    </item>
+    
+  </channel>
+</rss>
