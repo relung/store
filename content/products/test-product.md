@@ -1,20 +1,19 @@
 +++
+isDiscount = true
+discount = "20"
+priceBefore = "Rp 370.000"
 actualPrice = "Rp 250.000"
 categories = ["Sepatu"]
-comparePrice = ""
 date = "2019-08-02T17:00:00+00:00"
-descriptions = "Halo ini adalah deskripsi produk"
-images = ["/uploads/Capture.PNG", "/uploads/3982650.png"]
-inStock = "true"
+images = ["/uploads/Capture.jpg", "/uploads/925.jpg"]
+inStock = true
 tags = ["Sepatu"]
 thumbnailImage = "/uploads/925.jpg"
 title = "Test Product"
-variants = []
+
 [options]
-Color = []
-Size = []
+Warna = ["Biru", "Abu"]
+Ukuran = ["32", "33"]
 
 +++
-Product Ini adalah produk yang sangat anu
-
-Disertai anu
+Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu Product Ini adalah produk yang sangat anu Disertai anu

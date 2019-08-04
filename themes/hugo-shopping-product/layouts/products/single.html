@@ -1,27 +1,39 @@
 {{ define "main" }}
 <header>
-    <h1 class="text-center">{{ .Site.Title }}</h1>
+    <h2 class="text-center" style="margin-top: 20px">{{ .Site.Title }}</h2>
     {{ with .Site.Params.description }}<h4 class="text-center">{{ . }}</h4>{{ end }}
 </header>
-<article class="container-fluid">
+<article class="container-fluid" style="padding: 25px">
     <div class="row">
         <div class="col-12">
-            {{ partial "products/common/site-main-nav.html" . }} 
+            {{ partial "products/common/site-main-nav.html" . }}
         </div>
     </div>
     <div class="row align-items-start">
         <div class="col-12 col-md-6 order-md-2">
-            {{ partial "products/single/product-single-heading.html" . }} 
-            <div class="d-none d-md-block">{{ .Params.descriptions }}</div>
+            {{ partial "products/single/product-single-heading.html" . }}
+            <div class="d-none d-md-block">{{ .Content }}</div>
         </div>
         <div class="col-12 col-md-6 order-md-1">
-            {{ range .Params.images }}
-            <img class="b-lazy img-fluid text-center" data-src="{{ . | absURL }}" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /> 
-            {{ end }}
+            <center>
+            <div class="row">
+                {{ range $index := .Params.images }}
+                <div class='col-lg-6'>
+                    <a href="#{{ $index  }}">
+                        <img style="padding-bottom: 5px" class="b-lazy img-fluid text-center rounded object-fit: cover;"
+                            data-src="{{ . | absURL }}"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+                    </a>
+                    <a href="#_" class="lightbox" id="{{ $index  }}">
+                        <img class="b-lazy img-fluid text-center" src="{{ . | absURL }}" />
+                    </a>
+                </div>
+                {{ end }}
+            </div>
+            </center>
         </div>
         <div class="col-12 col-md-6 order-md-2 d-block d-md-none">
-            <p>{{ .Params.descriptions }}</p>
+            <p>{{ .Content }}</p>
         </div>
-    </div>
 </article>
 {{ end }}

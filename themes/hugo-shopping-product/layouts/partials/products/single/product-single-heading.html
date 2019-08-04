@@ -1,12 +1,13 @@
 <h1>{{ .Title }}</h1>
 <p>
-    <span class="product-compare-price"style="text-decoration: line-through">{{ .Params.comparePrice }}</span>
-    <span class="product-actual-price">{{ .Params.actualPrice }}</span>
-    <span class="product-not-in-stock" class="font-weight-bold" {{ if .Params.inStock }} style="display:none" {{end}}>— Sold Out</span>
-</p>
-<p>
+    <b>Harga: </b> {{ if .Params.isDiscount }} <span class="product-compare-price"style="text-decoration: line-through">{{ .Params.priceBefore }}</span><b> (Promo diskon{{ .Params.discount }}%)</b>{{end}}
+    <span class="product-actual-price"><h4>{{ .Params.actualPrice }}</h4></span>
+    <span class="product-not-in-stock" class="font-weight-bold" {{ if .Params.inStock }} style="display:none" {{end}}>— Habis</span>
+    <div><b>Metode Pembayaran: </b><span class="product-compare-price">Bayar di Tempat (COD)</span></div>
+    <div><b>Pengiriman Menggunakan: </b><span class="product-compare-price">J&T</span></div>
+    <br />
     {{ range $index, $element := .Params.options }}
-    <span>{{ $index | humanize }}</span>
+    <b><span>{{ $index | humanize }}</span></b>
     <select class="select-{{ $index }}">
        {{ range $element  }}
         <option>{{ . }}</option>
@@ -14,9 +15,12 @@
     </select>
     {{ end }}
 </p>
+<p>
+
+</p>
 <script>
     var productActualPrice  = {{ .Params.actualPrice }}
     var productComparePrice  = {{ .Params.comparePrice }}
     var productInStock = {{ .Params.inStock }}
-    var productVariants = JSON.parse({{ .Params.variants | jsonify }})
+    //var productVariants = JSON.parse({{ .Params.variants | jsonify }})
 </script>
