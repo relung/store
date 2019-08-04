@@ -3,60 +3,48 @@ label: Product
 hide_body: false
 fields:
 - type: text
-  name: title
-  label: title
-- type: datetime
-  name: date
-  label: date
-- type: list
-  name: tags
-  label: tags
+  name: sku
+  label: sku
+- type: boolean
+  name: isDiscount
+  label: isDiscount
+- type: text
+  name: discount
+  label: discount
+- type: text
+  name: priceBefore
+  label: priceBefore
+- type: text
+  name: actualPrice
+  label: actualPrice
 - type: list
   name: categories
   label: categories
+- type: datetime
+  name: date
+  label: date
 - type: image_gallery
   name: images
   label: images
+- type: boolean
+  name: inStock
+  label: inStock
+- type: list
+  name: tags
+  label: tags
 - type: file
   name: thumbnailImage
   label: thumbnailImage
 - type: text
-  name: actualPrice
-  label: actualPrice
-- type: text
-  name: comparePrice
-  label: comparePrice
-- type: text
-  name: inStock
-  label: inStock
+  name: title
+  label: title
 - type: field_group
   name: options
   label: options
   fields:
   - type: list
-    name: Color
-    label: Color
+    name: Warna
+    label: Warna
   - type: list
-    name: Size
-    label: Size
-- type: field_group_list
-  name: variants
-  label: variants
-  fields:
-  - type: list
-    name: optionCombination
-    label: optionCombination
-  - type: text
-    name: comparePrice
-    label: comparePrice
-  - type: text
-    name: actualPrice
-    label: actualPrice
-  - type: boolean
-    name: inStock
-    label: inStock
-- type: text
-  name: descriptions
-  label: descriptions
-pages:
-- content/products/test-product.md
+    name: Ukuran
+    label: Ukuran
