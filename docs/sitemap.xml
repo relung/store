@@ -3,65 +3,65 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://relung.github.io/products/test-product-2/</loc>
+    <loc>https://relung.github.io/store/products/test-product-2/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://relung.github.io/products/test-product/</loc>
+    <loc>https://relung.github.io/store/products/test-product/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://relung.github.io/categories/boots/</loc>
-    <lastmod>2019-08-02T17:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://relung.github.io/categories/</loc>
+    <loc>https://relung.github.io/store/categories/boots/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://relung.github.io/categories/diskon/</loc>
+    <loc>https://relung.github.io/store/categories/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://relung.github.io/</loc>
+    <loc>https://relung.github.io/store/categories/diskon/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://relung.github.io/products/</loc>
+    <loc>https://relung.github.io/store/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://relung.github.io/categories/sendal/</loc>
+    <loc>https://relung.github.io/store/products/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://relung.github.io/tags/sepatu/</loc>
+    <loc>https://relung.github.io/store/categories/sendal/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://relung.github.io/categories/sepatu/</loc>
+    <loc>https://relung.github.io/store/tags/sepatu/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://relung.github.io/tags/</loc>
+    <loc>https://relung.github.io/store/categories/sepatu/</loc>
+    <lastmod>2019-08-02T17:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://relung.github.io/store/tags/</loc>
     <lastmod>2019-08-02T17:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

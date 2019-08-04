@@ -1,4 +1,4 @@
-baseURL = "https://relung.github.io/"
+baseURL = "https://relung.github.io/store/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "hugo-shopping-product"
